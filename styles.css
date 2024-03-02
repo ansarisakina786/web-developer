@@ -1,0 +1,123 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+h1,
+h2 {
+  color: #61dafb;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  background-color: #fff;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 12px 15px;
+  background-color: #5bc0de;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #4fa3d1;
+}
+
+.task-section {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  background-color: #444;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #333;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #666;
+}
+
+button.completeBtn {
+  background-color: #28a745;
+}
+
+button.updateBtn {
+  background-color: #ffc107;
+  margin-right: 5px;
+}
+
+button.deleteBtn {
+  background-color: #dc3545;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    border-radius: 5px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
