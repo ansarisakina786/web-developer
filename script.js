@@ -52,11 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
         saveTasksToLocalStorage();
     }
 
-    // Load tasks from localStorage
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     storedTasks.forEach(taskText => addTask(taskText));
 
-    // Save tasks to localStorage whenever a task is added, updated, completed, or deleted
     function saveTasksToLocalStorage() {
         const tasks = Array.from(document.querySelectorAll('li span')).map(task => task.innerText);
         localStorage.setItem('tasks', JSON.stringify(tasks));
